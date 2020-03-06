@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">小车</string>
+    <string name="app_control">小车控制</string>
+    <string name="welcome">欢迎使用xxxxx系统，请输入登录密码</string>
+    <string name="change">修改密码</string>
+    <string name="connect">连接设备</string>
+    <string name="disconnect">断开连接</string>
+    <string name="left">◀︎</string>
+    <string name="right">▶︎</string>
+    <string name="yuntai">云台控制</string>
+    <string name="set">参数设置</string>
+    <string name="username">Username</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="password">Password</string>
+    <string name="app_login">登录</string>
+    <string name="app_register">注册</string>
+</resources>

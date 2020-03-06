@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/control_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@color/colortoolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_register"
+        app:titleTextColor="@color/colorlightblue"
+        tools:ignore="MissingConstraints">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/control_toolbar">
+
+        <EditText
+            android:id="@+id/new_username"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName" />
+
+
+        <EditText
+            android:id="@+id/new_password"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Confirm password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:onClick="submit"
+            android:text="Submit" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

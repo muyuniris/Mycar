@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <com.example.muyun.mycar.RockerView
+        android:id="@+id/rockerView1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.muyun.mycar.RockerView
+        android:id="@+id/yuntaiView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/control_toolbar"
+        android:layout_width="775dp"
+        android:layout_height="30dp"
+        android:background="@color/colortoolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_control"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/yuntaiView"
+        app:layout_constraintStart_toEndOf="@+id/rockerView1"
+        app:layout_constraintTop_toBottomOf="@+id/control_toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/openswitch"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:showText="true"
+        android:textOff="断开"
+        android:textOn="连接"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    <Switch
+        android:id="@+id/lightswitch"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:showText="true"
+        android:textOff="灯灭"
+        android:textOn="灯亮"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openswitch" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/r"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1">
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="低速" />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="高速" />
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>

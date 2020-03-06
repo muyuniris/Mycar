@@ -125,39 +125,7 @@ public class ControlActivity extends AppCompatActivity {
                     che=(byte)jiaodu;
                 }
                 sendmessage();
-                //Toast.makeText(ControlActivity.this,dir,Toast.LENGTH_SHORT).show();
-//                switch (dir){
-//                    case "向前":
-//                        sendmessage("1");
-//                        break;
-//                    case "向后":
-//                        sendmessage("5");
-//                        break;
-//                    case "向左":
-//                        sendmessage("B");
-//                        break;
-//                    case "向右":
-//                        sendmessage("C");
-//                        break;
-//                    case "左前":
-//                        sendmessage("8");
-//                        break;
-//                    case "右前":
-//                        sendmessage("2");
-//                        break;
-//                    case "左后":
-//                        sendmessage("6");
-//                        break;
-//                    case "右后":
-//                        sendmessage("4");
-//                        break;
-//                    default:
-//                        sendmessage("0");
-//                        break;
-//                }
-                // TODO Auto-generated method stub
-                // doLog(x + "/" + y);
-                // setLayout(rockerView2, (int)x, (int)y);
+               
             }
         });
         rockerViewyuntai = (RockerView) findViewById(R.id.yuntaiView);
@@ -175,24 +143,7 @@ public class ControlActivity extends AppCompatActivity {
                     duoji=(byte)jiaodu;
                 }
                 sendmessage();
-                //Toast.makeText(ControlActivity.this,dir,Toast.LENGTH_SHORT).show();
-//                switch (dir){
-//                    case "向前":
-//                        sendmessage("D");
-//                        break;
-//                    case "向左":
-//                        sendmessage("7");
-//                        break;
-//                    case "向右":
-//                        sendmessage("3");
-//                        break;
-//                    default:
-//                        sendmessage("0");
-//                        break;
-//                }
-                // TODO Auto-generated method stub
-                // doLog(x + "/" + y);
-                // setLayout(rockerView2, (int)x, (int)y);
+
             }
         });
         RadioGroup radioGroup=findViewById(R.id.r);
@@ -345,48 +296,7 @@ public class ControlActivity extends AppCompatActivity {
     }
 
 
-//    public void connect(View v){
-//        if(isconnect){
-//            Toast.makeText(ControlActivity.this,"连接已建立",Toast.LENGTH_SHORT).show();
-//        }
-//        else{
-//            new Thread(){
-//                public void run(){
-//                    try{
-//                        socket=new Socket("192.168.43.141",2002);
-//                        Log.e("Connect","建立连接："+socket);
-//                        handler.sendEmptyMessage(1);
-//                        isconnect=true;
-//                        // writer=socket.getOutputStream();
-//                        mPrintWriterClient=new PrintWriter(socket.getOutputStream());
-//                    } catch (UnknownHostException e) {
-//                        handler.sendEmptyMessage(0);
-//                        e.printStackTrace();
-//                    } catch (IOException e) {
-//                        handler.sendEmptyMessage(0);
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }.start();
-//        }
-//    }
-//    public void closeconnect(View v){
-//        if(isconnect){
-//            try {
-//                socket.close();
-//                socket=null;
-//                mBufferedReaderClient.close();
-//                mBufferedReaderClient=null;
-//                Toast.makeText(ControlActivity.this,"断开连接",Toast.LENGTH_SHORT).show();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//                Toast.makeText(ControlActivity.this,"断开连接失败",Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//        else{
-//            Toast.makeText(ControlActivity.this,"连接已断开",Toast.LENGTH_SHORT).show();
-//        }
-//    }
+
     public void sendmessage(){
 
         final byte[] msg={start,speed,dir,che,duoji,light,end};
@@ -399,8 +309,7 @@ public class ControlActivity extends AppCompatActivity {
                         e.printStackTrace();
                         handler.sendEmptyMessage(3);
                     }
-//                    mPrintWriterClient.print(msg);
-//                    mPrintWriterClient.flush();//清空
+
                     Log.e("Connect","发送结束,发送内容为"+msg);
                 }
             }.start();
